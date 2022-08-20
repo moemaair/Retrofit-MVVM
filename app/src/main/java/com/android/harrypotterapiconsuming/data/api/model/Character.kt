@@ -1,45 +1,45 @@
 package com.android.harrypotterapiconsuming.data.api.model
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
 
-@JsonClass(generateAdapter = true)
-private data class Character(
-    @Json(name = "actor")
+
+import com.google.gson.annotations.SerializedName
+
+data class Character(
+    @SerializedName("actor")
     val actor: String,
-    @Json(name = "alive")
+    @SerializedName("alive")
     val alive: Boolean,
-    @Json(name = "alternate_actors")
-    val alternateActors: List<String>,
-    @Json(name = "alternate_names")
-    val alternateNames: List<String>,
-    @Json(name = "ancestry")
+    @SerializedName("alternate_actors")
+    val alternateActors: List<Any>,
+    @SerializedName("alternate_names")
+    val alternateNames: List<Any>,
+    @SerializedName("ancestry")
     val ancestry: String,
-    @Json(name = "dateOfBirth")
+    @SerializedName("dateOfBirth")
     val dateOfBirth: String,
-    @Json(name = "eyeColour")
+    @SerializedName("eyeColour")
     val eyeColour: String,
-    @Json(name = "gender")
+    @SerializedName("gender")
     val gender: String,
-    @Json(name = "hairColour")
+    @SerializedName("hairColour")
     val hairColour: String,
-    @Json(name = "hogwartsStaff")
+    @SerializedName("hogwartsStaff")
     val hogwartsStaff: Boolean,
-    @Json(name = "hogwartsStudent")
+    @SerializedName("hogwartsStudent")
     val hogwartsStudent: Boolean,
-    @Json(name = "house")
+    @SerializedName("house")
     val house: String,
-    @Json(name = "image")
+    @SerializedName("image")
     val image: String,
-    @Json(name = "name")
+    @SerializedName("name")
     val name: String,
-    @Json(name = "patronus")
+    @SerializedName("patronus")
     val patronus: String,
-    @Json(name = "species")
+    @SerializedName("species")
     val species: String,
-    @Json(name = "wand")
+    @SerializedName("wand")
     val wand: Wand,
-    @Json(name = "wizard")
+    @SerializedName("wizard")
     val wizard: Boolean,
-    @Json(name = "yearOfBirth")
+    @SerializedName("yearOfBirth")
     val yearOfBirth: Int
 )

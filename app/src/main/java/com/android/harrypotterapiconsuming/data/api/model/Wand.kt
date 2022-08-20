@@ -1,15 +1,13 @@
 package com.android.harrypotterapiconsuming.data.api.model
 
 
-import com.squareup.moshi.Json
-import com.squareup.moshi.JsonClass
+import com.google.gson.annotations.SerializedName
 
-@JsonClass(generateAdapter = true)
 data class Wand(
-    @Json(name = "core")
+    @SerializedName("core")
     val core: String,
-    @Json(name = "length")
+    @SerializedName("length")
     val length: Int,
-    @Json(name = "wood")
+    @SerializedName("wood")
     val wood: String
 )
